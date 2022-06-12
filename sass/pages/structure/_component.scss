@@ -1,0 +1,117 @@
+/*Start Component Page*/
+.component {
+  font-family: 'Barlow Semi Condensed',
+    sans-serif;
+  font-family: 'Cairo',
+    sans-serif;
+  & .container{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  & .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+  & .box {
+    border-radius: 0;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    &.sed {
+      background-color: #e28525;
+      @include media(mobile){margin-bottom: 20px;}
+      & .icon {
+        background-color: #b66a1e;
+        & i {
+          color: #ffd678;
+        }
+      }
+    }
+    &.suvs {
+      background-color: #016972;
+      @include media(mobile){margin-bottom: 20px;}
+      & .icon {
+        background-color: #015758;
+        & i {
+          color: #2cb5bd;
+        }
+      }
+    }
+    &.lux {
+      background-color: #00403f;
+      @include media(mobile){margin-bottom: 20px;}
+      & .icon {
+        background-color: #015758;
+      & i {
+          color: #21b49a;
+        }
+      }
+    }
+    & .icon {
+      width: 30px;
+      height: 30px;
+      z-index: 2;
+      border-radius: 50%;
+      & i {
+        color: #ffca64;
+        position: absolute;
+        left: 55px;
+        top: 40px;
+        font-size: 25px;
+      }
+    }
+    & h2 {
+      color: white;
+      text-transform: uppercase;
+      margin: 50px 0;
+      font-size: 50px;
+      font-family: 'Big Shoulders Display',
+        cursive;
+      font-weight: bold;
+    }
+    &  p {
+       color: white;
+       font-size: 18px;
+       line-height: 1.8;
+       margin-bottom: 160px;
+     }
+     & a {
+      transition: all 0.3s;
+      background-color: white;
+      border-radius: 30px;
+      position: absolute;
+      padding: 15px 30px;
+      transform: translateX(-50%);
+      bottom: 30px;
+      left: 50%;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &.suvs a {
+      color: #015758;
+      &:hover {
+        background-color: #015758;
+        color: white;
+        border: 1px solid white;
+      }
+    }
+    &.sed a {
+      color: #b66a1e;
+      &:hover {
+        background-color: #b66a1e;
+        color: white;
+        border: 1px solid white;
+      }
+    }
+    &.lux a {
+      color: #00403f;
+      &:hover {
+        background-color: #00403f;
+        color: white;
+        border: 1px solid white;
+      }
+    }
+  }
+}
+
+/*End Component Page*/

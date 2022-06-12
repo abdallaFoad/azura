@@ -1,0 +1,106 @@
+/*Start Testimonials Page*/
+.testimonials {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-Weight: 500;
+  Font-size: 13px;
+  margin-bottom: 50px;
+  & .container{
+    padding: 20px 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: 350px 350px;
+    gap: 20px;
+    @include media(medium){
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    @include media(mobile){
+      display: flex;
+      flex-direction: column;
+    }
+    & > div {
+      border-radius: 20px;
+      padding: 15px;
+      overflow: hidden;
+    }
+    & div .head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      & img {
+        max-width: 100%;
+        transition: all .7s;
+        cursor: pointer;
+        &:hover {
+          transform: translateY(15px) rotate(30deg);
+        }
+      }
+      & .para {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: all .7s;
+        &:hover {
+          transform: translateX(10px);
+          cursor: pointer;
+        }
+      }
+    }
+    & div p:first-of-type {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      @include media(medium){font-size: 20px;}
+    }
+    & div p {
+      font-size: 18px;
+      @include media(medium){font-size: 15px;}
+    }
+    & .one-daniel {
+      background-color: #733fc8;
+      color: white;
+      grid-column: 2 span;
+      @extend %main-box-shadow;
+    }
+    & .two-Jon {
+      background-color: #49556b;
+      color: white;
+      @extend %main-box-shadow;
+    }
+    & .three-Jean {
+      background-color: white;
+      @extend %main-box-shadow;
+    }
+    & .four-Patrick {
+      background-color: #18202d;
+      grid-column: 2 span;
+      color: white;
+      @extend %main-box-shadow;
+    }
+    & .five-Kira {
+      background-color: white;
+      color: black;
+      grid-row: 2 span;
+      @extend %main-box-shadow;
+    }
+  }
+  .image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(175, 149, 149);
+    outline: none;
+  }
+}
+%main-box-shadow{
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+/*End Testimonials Page*/

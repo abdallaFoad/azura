@@ -1,0 +1,40 @@
+/*Start peoples*/
+.peoples {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  margin-top: 100px;
+  @include media(mobile){
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  & .box{
+    background-color: #fffb78;
+    width: 300px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 10px 10px 30px;
+    border-radius: 10px;
+    & .images{
+      display: flex;
+      gap: -10px;
+      & > div:not(:first-child) {
+        margin-left: -10px;
+      }
+      & > div img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+      }
+    }
+    & .text p {
+      font-size: 20px;
+    }
+  }
+}
+/*End peoples*/

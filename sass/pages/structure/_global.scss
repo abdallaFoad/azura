@@ -1,0 +1,120 @@
+/*Start Global Rules*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cairo',
+    sans-serif;
+}
+html {
+  scroll-behavior: smooth !important;
+}
+
+.back-img {
+  background-image: url('../images/Slack_Technologies-Mark-Black-Logo.wine.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 800px;
+  height: 700px;
+  z-index: -33;
+}
+.back-img-tree {
+  background-image: url('../images/bg-premium-intro-1.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 800px;
+  height: 700px;
+  z-index: -33;
+}
+.spikes {
+  position: relative;
+  margin-bottom: 50px;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 30px;
+    right: 0;
+    position: absolute;
+    background-image: linear-gradient(120deg, #582957 25%, transparent 63%),
+      linear-gradient(142deg, #f7f2f8 15%, transparent 50%),
+      linear-gradient(68deg, #ff000000 68%, transparent 85%);
+    background-size: 30px 30px;
+    z-index: 1;
+  }
+}
+
+.img-background-content {
+  background-image: url('../images/content.png');
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  background-repeat: no-repeat;
+  z-index: -1;
+  top: 200px;
+  right: 200px;
+  border-radius: 50%;
+}
+.img-background-content {
+    @include media(small){
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+
+.display-none {
+  display: none;
+}
+
+:root {
+  --main-proof-color: #582957
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+.container{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  // @media (max-width: 767px){
+  //   &{
+  //     width:750px;
+  //   }
+  // }
+    @media (min-width:768px) {
+      & {
+        width: 750px;
+      }
+    }
+    @media (min-width:991px) {
+      & {
+        width: 950px;
+      }
+    }
+    @media (min-width:1200px) {
+      & {
+        width: 1170px;
+      }
+    }
+}
+#go-up {
+  position: fixed;
+  display: none;
+  right: 11px;
+  bottom: 40px;
+  font-size: 30px;
+  z-index: 3;
+  cursor: pointer;
+}
+/*End Global Rules*/

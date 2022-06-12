@@ -1,0 +1,109 @@
+/*Start Slack Page*/
+.slack {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  margin-top: 50px;
+  height: 100vh;
+  & .container{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    border-radius: 10px;
+    background-color: #3E54A3;
+    height: calc(100vh - 50px);
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: hsl(227, 45%, 44%, 90%);
+      z-index: -1;
+    }
+    & .content {
+      text-align: center;
+      padding: 0 40px;
+      & .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 100px;
+        & i{
+          font-size: 5vw;
+          @include media(mobile) {font-size: 15vw;}
+        }
+        & h1{
+          margin: 0;
+          font-size: 10vw;
+          @include media(mobile) {font-size: 20vw;}
+        }
+      }
+      & h5{
+        font-family: 'Heebo',
+          sans-serif;
+        margin: 30px 0;
+        font-size: 2vw;
+        letter-spacing: 3px;
+        font-weight: bolder;
+        @include media(mobile){font-size: 10vw;}
+      }
+      & p{
+        font-size: 2vw;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        font-family: 'Barlow',
+        sans-serif;
+        @include media (mobile){font-size: 5vw;}
+      }
+      & form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 50px;
+        @include media(mobile){flex-direction: column;}
+        & input[type="email"]{
+          flex-basis: 50%;
+          background: none;
+          border: 1px solid white;
+          outline: none;
+          padding: 10px;
+          caret-color: white;
+          height: 50px;
+          position: relative;
+          @include media(mobile){width: 100%;}
+          &:focus{
+            border: 1px solid white;
+            outline: 5px dotted #9F9CBF;
+          }
+          &::placeholder{
+            color: #9F9CBF;
+            font-size: 2vw;
+            @include media(mobile){font-size: 5vw;}
+          }
+        }
+        & input[type="submit"]{
+          padding: 10px 30px;
+          height: 50px;
+          flex-basis: 20%;
+          border-radius: 30px;
+          outline: none;
+          border: none;
+          font-size: 2vw;
+          text-transform: uppercase;
+          font-style: italic;
+          font-weight: bold;
+          color: #3E54A3;
+          transition: all .5s;
+          cursor: pointer;
+          @include media(mobile){font-size: 5vw;}
+          &:hover{transform: scale(1.02);}
+        }
+      }
+    }
+  }
+}
+/*End Slack Page*/

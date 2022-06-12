@@ -1,0 +1,47 @@
+/*Start Hotels Section*/
+.hotels {
+  display: flex;
+  @media (min-width:768px) and (max-width:1200px) {
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 30px;
+  }
+  @include media(mobile){
+    flex-direction: column;
+    gap:30px;
+    margin-top: 30px;
+  }
+  & .box{
+    border: 1px solid #fbe5ff;
+    color: #fbe5ff;
+    border-radius: 10px;
+    padding: 20px;
+    &:first-child{
+      flex-basis: calc(70% - 230px);
+      margin-right: 230px;
+      @include media(mobile){margin-right: 0px;}
+    }
+    &:nth-child(2){
+      flex-basis: calc(30% - 80px);
+      margin-left: 80px;
+      display: flex;
+      gap: 30px;
+      @include media(mobile){margin-left: 0px;}
+    }
+    & h1{
+      font-size: 50px;
+      font-weight: 300;
+      margin-top: 0;
+    } 
+    & p{
+      color: #ebe5ccad;
+      font-size: 18px;
+    }
+    & h2{font-weight: 500;}
+    & i{
+      color: #fffb78;
+      font-size: 20px;
+    }
+  }
+}
+/*end Hotels Section*/
